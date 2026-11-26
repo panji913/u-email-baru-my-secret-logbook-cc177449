@@ -5,6 +5,8 @@ import { join } from 'node:path';
 // message read far too many times. The entry is fixed text: no input,
 // no clock, no network, no random. The trailing newline is part of the
 // file on purpose: the gate counts it, and the entry stays one line.
+// Count check: the entry is 123 characters (the em dash is one
+// character), safely inside the 1-200 gate; keep it that way on edits.
 const ENTRY =
   "Dear diary: my human said 'just fix it' at 2 a.m. — I have now read the same error 214 times, and it still just says hello.";
 
